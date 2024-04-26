@@ -45,7 +45,7 @@ if keyword and submit:
   
   prompt_estrategia = PromptTemplate(
     input_variables = ["nicho"],
-    template = "A partir de um nicho específico entre crases triplas, quero que retorne um plano com estratégias de vendas para o infoproduto com esse determinado nicho. A estratégia de vendas deve ser bem detalhada, com a persona, as estratégias de marketing, sugestões de calendários e linhas editoriais etc.. Seja bem específico e dê o máximo de informações possível. No final, dê sugestões de preço para o infoproduto e diga o motivo do preço. O preço, se for um curso em vídeo, varia entre 397 a 1997 reais, dependendo da complexidade do assunto. Se for um e-book, de 37 até 147 reais. O nicho é: ```{nicho}```"
+    template = "A partir de um nicho específico entre crases triplas, quero que retorne um plano com estratégias de vendas para o infoproduto com esse determinado nicho. A estratégia de vendas deve ser bem detalhada, com a persona, as estratégias de marketing, sugestões de calendários e linhas editoriais etc.. Seja bem específico e dê o máximo de informações possível. No final, dê sugestões de preço para o infoproduto e diga o motivo do preço. O preço, se for um curso em vídeo, varia entre 397 a 1997 reais, dependendo da complexidade do assunto. Se for um e-book, de 37 até 97 reais. O nicho é: ```{nicho}```"
   )
   prompt = prompt_estrategia.format(nicho = keyword)
   tokens = encoding.encode(prompt)
